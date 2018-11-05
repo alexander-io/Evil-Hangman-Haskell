@@ -1,6 +1,3 @@
--- Alexander Harris
--- 291 Programming Language Paradigms
--- Assignment # 6, Evil Hangman
 import System.Exit (exitSuccess)
 
 filter_list_items_to_length item_length lst = filter (\e->(item_length==(length e))) lst
@@ -17,7 +14,6 @@ s_to_c s = undefined
 -- map each item in lst -> e, map each item in  e -> character, iterate over match in parallel;
 -- if each character is found in the match string, keep it in the output, else replace it with 'e'
 -- ex ::: input -> "a" ["alex", "bark", "cream"], output -> ["a---", "-a--", "---a-"]
---build_list_of_patterns match lst = map (\e-> map (\el-> if el `elem` match then el else '-') e) lst
 build_list_of_patterns match lst = map (\e-> map (\el-> if el `elem` match then el else '-') e) lst
 build_list_of_pattern_tuples match lst = map (\e-> (e, map (\el-> if el `elem` match then el else '-') e)) lst
 
